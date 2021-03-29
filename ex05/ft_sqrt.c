@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mderuell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 11:40:18 by mderuell          #+#    #+#             */
-/*   Updated: 2021/03/29 11:41:13 by mderuell         ###   ########.fr       */
+/*   Created: 2021/03/29 12:10:21 by mderuell          #+#    #+#             */
+/*   Updated: 2021/03/29 13:49:36 by mderuell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_recursive_factorial(int nb)
+int		ft_sqrt(int nb)
 {
-	if (nb < 1)
-		return (nb = 1);
-	return (nb * ft_recursive_factorial(nb - 1));
+	int i;
+
+	i = 1;
+	while ((i * i) <= nb)
+	{
+		if ((i * i) == nb)
+			return (i);
+		i++;
+	}
+	return (0);
 }

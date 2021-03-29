@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mderuell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 11:40:18 by mderuell          #+#    #+#             */
-/*   Updated: 2021/03/29 11:41:13 by mderuell         ###   ########.fr       */
+/*   Created: 2021/03/29 13:51:20 by mderuell          #+#    #+#             */
+/*   Updated: 2021/03/29 14:00:05 by mderuell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_recursive_factorial(int nb)
+int		ft_is_prime(int nb)
 {
-	if (nb < 1)
-		return (nb = 1);
-	return (nb * ft_recursive_factorial(nb - 1));
+	if (nb <= 1 && nb >= -1)
+		return (0);
+	else if ((nb % 2) == 1)
+		return (1);
+	else
+		return (0);
+}
+#include <stdio.h>
+int main()
+{
+	printf("%d\n",ft_is_prime(-13));
 }
