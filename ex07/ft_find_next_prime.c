@@ -6,7 +6,7 @@
 /*   By: mderuell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 14:29:50 by mderuell          #+#    #+#             */
-/*   Updated: 2021/03/30 16:07:25 by mderuell         ###   ########.fr       */
+/*   Updated: 2021/03/30 16:18:01 by mderuell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int		ft_is_prime(int nb)
 	else
 		return (0);
 }
-int ft_find_next_prime(int nb)
+
+int		ft_find_next_prime(int nb)
 {
 	int i;
 
@@ -28,13 +29,8 @@ int ft_find_next_prime(int nb)
 	{
 		if (ft_is_prime(i))
 			return (i);
-		else 
+		else
 			i++;
 	}
 	return (0);
-}
-#include <stdio.h>
-int main()
-{
-	printf("%d\n", ft_find_next_prime(1561));
 }
